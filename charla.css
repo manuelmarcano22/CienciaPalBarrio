@@ -1,0 +1,110 @@
+@font-face {font-family: Barlow; src: url("vendor/barlow.ttf") format("truetype"); font-display: swap;}
+@font-face {font-family: "Barlow Condensed"; src: url("vendor/barlow-condensed.ttf") format("truetype"); font-weight: 700; font-display: swap;}
+:root {--ink:#10131a; --paper:#faf8f2; --chalk:#f8f3e8; --soft:#cbd1d5; --gold:#ffb868; --r-background-color:var(--ink); --r-link-color:var(--gold); --r-main-font:Barlow,Arial,sans-serif;}
+body {background:var(--ink);}
+.reveal {font: 30px/1.24 Barlow,Arial,sans-serif; color:var(--chalk);}
+.reveal .slides {text-align:left;}
+.reveal .slides section {box-sizing:border-box; height:100%; width:100%; padding:0; text-align:left;}
+.reveal h1,.reveal h2 {font-family:"Barlow Condensed","Arial Narrow",sans-serif; font-weight:700; line-height:0.99; letter-spacing:-.018em; margin:0; text-transform:none;}
+.reveal h1 {font-size:65px;}
+.reveal h2 {font-size:84px; text-wrap:balance;}
+.reveal p,.reveal figure {margin:0;}
+.reveal img {display:block; max-width:100%; max-height:100%; margin:0;}
+.reveal a {color:inherit; text-decoration:underline; text-underline-offset:3px; text-decoration-color:currentColor;}
+.reveal a:focus-visible,.reveal video:focus-visible {outline:3px solid #d56a1c; outline-offset:4px;}
+.reveal .eyebrow {font-size:19px; font-weight:bold; letter-spacing:.10em; text-transform:uppercase;}
+.reveal .eyebrow {color:var(--gold); margin-bottom:20px;}
+.reveal .lead {font-size:35px; color:var(--soft); margin-top:29px; text-wrap:pretty;}
+.reveal em {font-style:normal; color:var(--gold);}
+.reveal .cite,.reveal figcaption {font:19px/1.2 Barlow,Arial,sans-serif;}
+.reveal .cite {display:block; color:#bac0c9; margin-top:27px;}
+.reveal figcaption {color:#d5d8de;}
+.reveal .spread {height:100%; display:grid; grid-template-columns:44% 56%; grid-template-rows:minmax(0,1fr); align-items:stretch;}
+.reveal .copy {align-self:center; padding:30px 40px 48px 40px;}
+.reveal .portrait {min-width:0; min-height:0; box-sizing:border-box; display:grid; grid-template-rows:minmax(0,1fr) auto; gap:11px; padding:16px 14px 19px 0;}
+.reveal .portrait img {min-height:0; width:100%; height:100%; object-fit:cover;}
+.reveal .portrait figcaption {padding-right:30px;}
+.reveal .earth .portrait img,.reveal .image-first .portrait img,.reveal .finale .portrait img {object-fit:contain;}
+.reveal .image-first {grid-template-columns:55% 45%;}
+.reveal .image-first .portrait {padding-left:18px; padding-right:0;}
+.reveal .helix img {object-fit:cover; object-position:50% 50%;}
+.reveal .poster-slide {height:100%; box-sizing:border-box; padding:7px 24px 12px; display:grid; grid-template-rows:60px minmax(0,1fr) 34px; gap:7px;}
+.reveal .poster-slide h1,.reveal .poster-slide h2,.reveal .remnants h2 {font-size:57px; align-self:center;}
+.reveal .origin-chart,.reveal .firework-chart {height:100%; width:auto; justify-self:center; position:relative; display:block; overflow:hidden; color:white; text-decoration:none;}
+.reveal .origin-chart {aspect-ratio:980 / 528;}
+.reveal .origin-chart img,.reveal .firework-chart img {position:absolute; height:auto; max-width:none; max-height:none;}
+/* Show the table and its eight original illustrations, framed from the 3:2 NASA poster. */
+.reveal .origin-chart img {width:110.2041%; left:-5%; top:-22.7273%;}
+.origins-row {position:absolute; left:17.1%; width:43.9%; height:5.8%; display:grid; grid-template-columns:repeat(4,1fr); background:linear-gradient(90deg,#2a0026,#24003c 65%,#22004f);}
+.origins-row.upper {top:11.7%;}
+.origins-row.lower {top:28.1%; background:linear-gradient(90deg,#290028,#260046 65%,#200169);}
+.origins-row span {text-align:center; white-space:nowrap; font:600 14px/1.05 Barlow,Arial,sans-serif; align-self:start;}
+.poster-credit {display:flex; align-items:center; justify-content:space-between; gap:12px; padding:0 86px 0 2px;}
+.poster-credit>span {font-size:25px;}
+.poster-credit small,.stellar-examples small {color:#cbd0da; font:17px/1.2 Barlow,Arial,sans-serif;}
+.reveal .firework-chart {aspect-ratio:1059 / 578;}
+/* Keep NASA's color bands, element symbols, and origin icons. The labels sit on the original colors. */
+.reveal .firework-chart img {width:100%; left:0; top:-17.3%;}
+.firework-names {display:grid; grid-template-columns:repeat(7,1fr); position:absolute; top:42.65%; height:9.3%; width:100%; text-align:center; color:#181522; font:600 24px/1 Barlow,Arial,sans-serif;}
+.firework-names span {display:grid; place-content:center;}
+.firework-names span:nth-child(1) {background:#ff8d8e;}
+.firework-names span:nth-child(2) {background:#e73f41;}
+.firework-names span:nth-child(3) {background:#ffae4a;}
+.firework-names span:nth-child(4) {background:#ffdf46;}
+.firework-names span:nth-child(5) {background:#66c178;}
+.firework-names span:nth-child(6) {background:#a6dede;}
+.firework-names span:nth-child(7) {background:#b469b3;}
+.reveal .remnants {display:grid; grid-template-rows:auto minmax(0,1fr); gap:15px; height:100%; box-sizing:border-box; padding:12px 22px 20px;}
+.stellar-examples {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; min-height:0;}
+.stellar-examples figure {display:grid; grid-template-rows:minmax(0,1fr) auto; gap:10px; min-height:0;}
+.reveal .stellar-examples img {width:100%; height:100%; min-height:0; object-fit:cover;}
+.stellar-examples figcaption {display:grid; gap:3px; grid-template-rows:auto minmax(64px,auto) auto;}
+.stellar-examples strong {font:700 35px/1.04 "Barlow Condensed",Arial,sans-serif; color:var(--chalk);}
+.stellar-examples figcaption span {font-size:25px;}
+.reveal .spectrum-frame {height:100%; min-height:0; display:grid; grid-template-rows:auto minmax(0,1fr) auto; gap:10px; box-sizing:border-box; padding:12px 26px 17px;}
+.reveal .spectrum-frame h2 {font-size:59px;}
+.reveal .spectrum-frame img {width:100%; height:100%; object-fit:contain; min-height:0;}
+.reveal .spectrum-frame figcaption {display:grid; grid-template-columns:1fr auto; gap:22px; align-items:end;}
+.spectrum-frame .fragment {font-size:30px; color:var(--chalk);}
+.spectrum-frame .source {font-size:17px; padding-right:86px;}
+.reveal .sequence {height:100%; box-sizing:border-box; display:grid; align-content:center; padding:6px 40px 15px;}
+.reveal .sequence h2 {font-size:68px;}
+.reveal .sequence .eyebrow {margin-bottom:6px;}
+.reveal .sequence figure {margin-top:15px;}
+.reveal .sequence img {width:100%; height:386px; object-fit:contain; background:#0c1721;}
+.reveal .sequence figcaption {padding-top:6px;}
+.reveal .after {font-size:33px; color:var(--gold); margin-top:12px;}
+.reveal .answer {font-size:31px; margin-top:29px;}
+.reveal .controls {color:#d28c54; font-size:8px; bottom:7px; right:6px;}
+.reveal .progress {color:#da945d; height:3px;}
+.reveal .art-frame {height:100%; display:grid; grid-template-rows:minmax(0,1fr) auto; gap:10px; box-sizing:border-box; padding:15px 28px 22px;}
+.reveal .art-frame>img {width:100%; height:100%; object-fit:contain; min-height:0;}
+.reveal .art-caption {display:flex; align-items:baseline; justify-content:space-between; gap:22px;}
+.reveal .art-caption h2 {font-size:51px;}
+.reveal .art-caption .source {font-size:18px; color:#c1c8d0; text-align:right; max-width:380px;}
+.reveal .diagram-img img {object-fit:contain;}
+.reveal .movie {width:100%; height:100%; max-width:100%; max-height:100%; object-fit:contain; background:#000;}
+@media (prefers-reduced-motion:reduce) {.reveal .fragment,.reveal .slides section {transition:none!important;}}
+
+.reveal .answer {margin-top:24px; font-size:29px; color:#f5ba88;}
+.reveal .more {margin-top:22px;font-size:20px;color:#dca879;}
+
+.reveal .primordial {height:100%; box-sizing:border-box; padding:22px 44px 20px; display:grid; grid-template-rows:auto minmax(0,1fr) auto;}
+.reveal .primordial h1 {font-size:81px;}
+.primordial-elements {display:flex; align-items:center; justify-content:center; gap:78px;}
+.reveal .primordial-elements figure {text-align:center;}
+.nasa-cell {width:298px; height:298px; background-image:url("assets/tabla-origenes-nasa.png"); background-size:1963.64% auto; background-repeat:no-repeat;}
+.primordial-h {background-position:5.17% 20.3%;}
+.primordial-he {background-position:94.63% 20.3%;}
+.reveal .primordial-elements figcaption {font:700 41px/1.1 "Barlow Condensed",Arial,sans-serif; color:var(--chalk); margin-top:9px;}
+.primordial-foot {display:flex; align-items:baseline; justify-content:space-between; gap:20px; padding-right:46px;}
+.primordial-foot p {font-size:32px;}
+.primordial-foot small {font-size:17px; color:var(--soft);}
+.reveal .living-world {display:grid; height:100%; grid-template-columns:45% 55%; grid-template-rows:minmax(0,1fr);}
+.reveal .living-world figure {min-height:0; display:grid; grid-template-rows:minmax(0,1fr) auto; gap:7px; padding:8px 12px 18px 0;}
+.reveal .living-world img {width:100%; height:100%; object-fit:cover; object-position:50% 48%;}
+
+.reveal .early-table {align-self:center; justify-self:center; height:100%; width:auto; max-width:100%; aspect-ratio:980 / 528;}
+.reveal .bio-overlay {position:absolute; inset:0; width:100%; height:100%; pointer-events:none;}
+.reveal .art-caption h1 {font-size:51px;}
+.reveal .spectrum-frame .source {text-align:right;}
